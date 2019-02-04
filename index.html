@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Animations Task</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .img, article {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            /* background-attachment: fixed; */
+        }
+        .img {
+            opacity: 0;
+            right: -100vw;
+        }
+        .img.a {
+            background-image: url("images/13-gall01.jpg");
+            opacity: 1;
+            right: 0;
+            animation-name: img-a;
+            animation-duration: 16s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes img-a {
+            0%{
+            }
+            20% {
+                transform: scale(1.1) translateX(60px);
+            }
+            40%{
+            }
+            60% {
+            }
+            80%{
+            }
+            100% {
+            }
+        }
+        .img.b {
+            background-image: url("images/13-gall02.jpg");
+            animation-name: img-b;
+            animation-duration: 16s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes img-b {
+            0%{
+            }
+            15% {
+                transform: translateX(-100vw) scale(2);
+                opacity: 0;      
+            }
+            20% {
+                transform: translateX(-100vw) scale(1);
+                opacity: 1;
+            }
+            40%{
+            }
+            60% {
+            }
+            80% {
+                transform: translateX(-100vw);
+                opacity: 1;
+            }
+            82% {
+                transform: translateX(100vw);
+                opacity: 0;               
+            }
+            100% {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+        }
+        .img.c {
+            background-image: url("images/13-gall03.jpg");
+            animation-name: img-c;
+            animation-duration: 16s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes img-c {
+            0%{
+            }
+            20% {
+            }
+            35% {
+                transform: translateX(-100vw);
+                opacity: 0;
+            }
+            40% {
+                transform: translateX(-100vw);
+                opacity: 1;
+            }
+            60% {
+            }
+            80%{
+            }
+            82% {
+                transform: translateX(-100vw);
+                opacity: 1;
+            }
+            84% {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+        }
+        .img.d {
+            background-image: url("images/13-gall04.jpg");
+            animation-name: img-d;
+            animation-duration: 16s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes img-d {
+            0%{
+            }
+            20% {
+            }
+            40%{
+            }
+            55% {
+                transform: translate(-100vw, 0) scale(.9);
+                opacity: 0;
+            }
+            60% {
+                transform: translate(-100vw, 0) scale(1);
+                opacity: 1;
+            }
+            80% {
+            }
+            84% {
+                transform: translate(-100vw, 0);
+                opacity: 1;
+            }
+            86% {
+                transform: translate(-100vw, -100vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-100vw, -100vh);
+                opacity: 0;
+            }
+        }
+        .img.e {
+            background-image: url("images/13-gall05.jpg");
+            animation-name: img-e;
+            animation-duration: 16s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes img-e {
+            0%{
+            }
+            20% {
+            }
+            40%{
+            }
+            60% {
+            }
+            75% {
+                transform: translate(-100vw, 0) scale(1.1);
+                opacity: 0;
+            }
+            80%{
+                transform: translate(-100vw, 0) scale(1.1);
+                opacity: 1;
+            }
+            95% {
+                transform: translate(-100vw, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-100vw, 0) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* .img.f {
+            background-image: url("images/13-gall06.jpg");
+        }
+        .img.g {
+            background-image: url("images/13-gall07.jpg");
+        } */
+        .art1, .art3 {
+            background-image: linear-gradient(#000, #333);
+        }
+        .art1 {
+            top: 100vh;
+        }
+        .art2 {
+            background-image: linear-gradient(#fff, #ccc);
+            top: 200vh;
+        }
+        .art3{
+            top: 300vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="img a"></div>
+        <div class="img b"></div>
+        <div class="img c"></div>
+        <div class="img d"></div>
+        <div class="img e"></div>
+        <!-- <div class="img f"></div>
+        <div class="img g"></div> -->
+    </div>
+    <article class="art1">
+        <h2>Section Title</h2>
+        <p>Some text</p>
+    </article>
+    <article class="art2">
+        <h2>Section Title</h2>
+        <p>Some text</p>
+    </article>
+    <article class="art3">
+        <h2>Section Title</h2>
+        <p>Some text</p>
+    </article>
+</body>
+</html>
